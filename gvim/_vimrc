@@ -1,0 +1,56 @@
+" ######################### SETTINGS #########################
+set nocompatible " no compatiable with old vi
+set nobackup
+set noswapfile
+set nobomb
+" TIPS: [ -= -> turn off | += -> turn on ] 
+		" $ vim --version 查看是否vim版本支持系统剪切板 [ +clipboard -> support | -clipboard -> unsupport] 
+		" "*p -> system clipboard
+		" ""p -> vim default register
+set clipboard+=unnamed " += 系统剪切板和vim默认寄存器连通 [ "* == "" ]
+set mouse-=a
+set guioptions-=T
+set guioptions-=m
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+set lines=45
+set columns=140
+winpos 200 150
+set history=1024
+set backspace=indent,eol,start whichwrap+=<,>,[,]
+set winaltkeys=no
+set hlsearch " :set hlsearch ^ :nohl
+set number
+let $LANG = 'en_US.UTF-8'
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=utf-8,gbk2312,gbk,gb18030,cp936
+" TIPS: set guifont=fontStyle:fontSize
+" set guifont=Inconsolata_for_Powerline:h12:cANSI
+" set guifont=Consolas:h14
+set guifont=Fixedsys:h12
+syntax on
+" set ruler
+set showcmd
+set noeb " remove error sound
+set autochdir
+set autoindent
+set tabstop=4
+" set showmatch " auto hl match () [] ...
+set whichwrap=b,s,<,>,[,]
+" set statusline=%F%m%r%h%w\ [%{&ff}\|%Y]\ [%04l,%04v\|%p%%*%L]
+
+" ######################### LEADER #########################
+" TIPS: mapleader should be set first
+let mapleader=","
+nmap <leader>tt :tabnew<cr>
+nmap <leader>tc :tabclose<cr>
+nmap <leader>tp :tabprevious<cr>
+nmap <leader>tn :tabnext<cr>
+" TIPS: autocomplete [ ( -> () | [ -> [] | { -> {} ... ]
+" inoremap ( ()<ESC>i 
+" inoremap [ []<ESC>i
+" inoremap { {}<ESC>i
+" inoremap " ""<ESC>i
+" inoremap ' ''<ESC>i
